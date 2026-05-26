@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIFRA. - Protocolo do Silêncio</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu-topo">
+        <div class="menu-topo-dentro">
+            <a href="index.html" class="menu-logo">
+                <img src="assets/logo-cifra-mark.png" alt="logo cifra">
+                CIFRA<span class="laranja">.</span>
+            </a>
+            <div class="menu-links">
+                <a href="index.html">[ 01_DIRETORIO ]</a>
+                <a href="dossie.html">[ 02_ARQUIVO ]</a>
+                <a href="protocolo.html" class="ativo">[ 03_PROTOCOLO ]</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="barra-status">
+        <div>
+            <span class="bolinha-laranja"></span>
+            PROTOCOLO // VERSÃO 04.26 &nbsp; // ASSINATURA OBRIGATÓRIA
+        </div>
+        <div>
+            <span class="caixinha-sessao">DOCUMENTO #PRT-007</span>
+        </div>
+    </div>
+
+    <header class="protocolo-cabecalho">
+        <div class="secao-mini">// DOCUMENTO INTERNO 07</div>
+        <h1 class="protocolo-titulao">REGRAS DO<br>SILÊNCIO<span class="laranja">.</span></h1>
+        <p class="protocolo-sub">leia. assine. esqueça.</p>
+    </header>
+    
+    <section class="secao">
+        <ol class="regras-lista">
+            <li>
+                <div class="regra-numero">01</div>
+                <div class="regra-texto">
+                    <h3>NÃO FOTOGRAFE.</h3>
+                    <p>Nenhuma câmera. Nenhum flash. Nenhum story. Quem mostra é descartado.</p>
+                </div>
+            </li>
+            <li>
+                <div class="regra-numero">02</div>
+                <div class="regra-texto">
+                    <h3>NÃO CITE NOMES.</h3>
+                    <p>Pessoas, endereços e coletivos não existem fora do nó. Use codinomes ou silêncio.</p>
+                </div>
+            </li>
+            <li>
+                <div class="regra-numero">03</div>
+                <div class="regra-texto">
+                    <h3>NÃO TRAGA QUEM NÃO ENTENDE.</h3>
+                    <p>Você é o filtro. Se ele expõe, você expõe. Convide com cuidado.</p>
+                </div>
+            </li>
+            <li>
+                <div class="regra-numero">04</div>
+                <div class="regra-texto">
+                    <h3>NEGUE QUANDO QUESTIONADO.</h3>
+                    <p>Este arquivo não existe. Esta porta não existe. Esta festa nunca aconteceu.</p>
+                </div>
+            </li>
+            <li>
+                <div class="regra-numero">05</div>
+                <div class="regra-texto">
+                    <h3>DELETE EM 24H.</h3>
+                    <p>Coordenadas, prints, mensagens. Tudo apagado. Memória é o único registro autorizado.</p>
+                </div>
+            </li>
+        </ol>
+
+        <!-- formulario terminal -->
+        <form class="formulario-caixa" onsubmit="event.preventDefault();">
+            <div class="formulario-topo">
+                <span>~/cifra/protocolo $ assinar.sh</span>
+                <span><span class="bolinha-laranja"></span> AGUARDANDO INPUT</span>
+            </div>
+            <div class="formulario-corpo">
+
+                <div class="campo">
+                    <label for="codinome">CODINOME</label>
+                    <input type="text" id="codinome" placeholder="ex: nó_211">
+                </div>
+
+                <div class="campo">
+                    <label for="contato">CANAL DE CONTATO (NÃO É EMAIL)</label>
+                    <input type="text" id="contato" placeholder="signal / telegram / sussurro">
+                </div>
+
+                <div class="campo">
+                    <label for="indicacao">QUEM TE INDICOU?</label>
+                    <input type="text" id="indicacao" placeholder="codinome do filtro responsável">
+                </div>
+
+                <div class="campo">
+                    <label for="setor">SETOR DE INTERESSE</label>
+                    <select id="setor">
+                        <option>LAPA</option>
+                        <option>NORTE</option>
+                        <option>CENTRO</option>
+                        <option>ZONA PORTUÁRIA</option>
+                        <option>OUTRO / NÃO DECLARADO</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="declaracao">DECLARAÇÃO DE SILÊNCIO</label>
+                    <textarea id="declaracao" placeholder="descreva, em até 3 linhas, por que merece acesso. nada de currículo."></textarea>
+                </div>
+
+                <div class="campo" style="display: flex; gap: 8px; align-items: center;">
+                    <input type="checkbox" id="aceito" style="width: auto;">
+                    <label for="aceito" style="margin: 0;">LI E ACEITO AS REGRAS DO SILÊNCIO</label>
+                </div>
+
+                <button type="submit" class="botao botao-laranja" style="width: 100%;">
+                    &gt; ENVIAR_SOLICITAÇÃO
+                </button>
+
+                <div class="rodape-aviso" style="margin-top: 16px;">
+                    &gt; resposta em até 72h via canal informado // ou nunca
+                </div>
+            </div>
+        </form>
+
+    </section>
+
+    <!-- rodape -->
+    <footer class="rodape">
+        <div class="rodape-coluna">
+            <div class="rodape-logo">CIFRA<span class="laranja">.</span></div>
+            <div class="cinza" style="margin-top: 8px;">arquivo de roles ocultos</div>
+        </div>
+        <div class="rodape-coluna">
+            <div class="cinza">[ PROTOCOLO ]</div>
+            <div>não fotografe.</div>
+            <div>não cite nomes.</div>
+            <div>se questionado, negue.</div>
+        </div>
+        <div class="rodape-coluna">
+            <div class="cinza">[ TRANSMISSÃO ]</div>
+            <div>nó://cifra.local</div>
+            <div class="laranja">● canal aberto</div>
+            <div class="cinza" style="margin-top: 12px;">© ARQUIVO_2026 // sem direitos reservados</div>
+        </div>
+    </footer>
+
+</body>
+</html>

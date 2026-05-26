@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Pagina 2 - Dossie do Local - CIFRA -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIFRA. - Dossiê Galpão 504</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- menu (igual da home, copiei mesmo) -->
+    <nav class="menu-topo">
+        <div class="menu-topo-dentro">
+            <a href="index.html" class="menu-logo">
+                <img src="assets/logo-cifra-mark.png" alt="logo cifra">
+                CIFRA<span class="laranja">.</span>
+            </a>
+            <div class="menu-links">
+                <a href="index.html">[ 01_DIRETORIO ]</a>
+                <a href="dossie.html" class="ativo">[ 02_ARQUIVO ]</a>
+                <a href="protocolo.html">[ 03_PROTOCOLO ]</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="barra-status">
+        <div>
+            <span class="bolinha-laranja"></span>
+            DOSSIÊ // ARQUIVO #504 &nbsp; // NÍVEL DE SIGILO: CLASSE-3
+        </div>
+        <div>
+            <span class="caixinha-sessao">ABERTO EM 04.05.2026 03:47</span>
+        </div>
+    </div>
+
+    <!-- cabecalho do dossie -->
+    <header class="dossie-cabecalho">
+        <div class="dossie-id">ARQUIVO_ROOT / DIRETÓRIO_OCULTO / 504</div>
+        <h1 class="dossie-titulao">GALPÃO 504<span class="laranja">.</span></h1>
+        <p class="dossie-sub">
+            Estrutura industrial desativada na zona portuária. Pé direito de 12 metros. Som ressoa nas vigas
+            metálicas. Entrada pelo beco lateral, porta sem identificação. Senha rotativa.
+        </p>
+    </header>
+
+    <!-- galeria preto e branco -->
+    <div class="dossie-galeria">
+        <div class="dossie-foto"><img src="assets/scene-rave.jpg" alt="cena rave"></div>
+        <div class="dossie-foto"><img src="assets/scene-door.jpg" alt="cena porta"></div>
+        <div class="dossie-foto"><img src="assets/scene-rooftop.jpg" alt="cena rooftop"></div>
+    </div>
+
+    <!-- corpo do dossie -->
+    <div class="dossie-corpo">
+
+        <div class="dossie-relatorio">
+            <div class="secao-mini">// RELATÓRIO TÉCNICO 04</div>
+            <h2>OBSERVAÇÕES DE CAMPO</h2>
+            <p>
+                Imóvel originalmente registrado como armazém de cabotagem. Desativado em 1997.
+                Reativado de forma não oficial em 2021 por coletivo anônimo. Acesso por convite
+                ou por reconhecimento facial entre frequentadores antigos.
+            </p>
+            <p>
+                Sistema de som montado sob a viga central. Quatro torres. Capacidade não-oficial
+                estimada em 600 corpos. Saídas de emergência marcadas com fita laranja fluorescente.
+            </p>
+            <p>
+                Recomenda-se chegada após meia-noite. Bebida trazida do exterior é tolerada.
+                Captura de imagem é motivo de expulsão imediata.
+            </p>
+
+            <div style="margin-top: 32px;">
+                <div class="dossie-dado"><span class="cinza">// SETOR</span><span>LAPA</span></div>
+                <div class="dossie-dado"><span class="cinza">// CAPACIDADE</span><span>~600</span></div>
+                <div class="dossie-dado"><span class="cinza">// ACESSO</span><span>RESTRITO</span></div>
+                <div class="dossie-dado"><span class="cinza">// FREQUÊNCIA</span><span>QUI / SEX / SAB</span></div>
+                <div class="dossie-dado"><span class="cinza">// STATUS</span><span class="laranja">● DISPONÍVEL</span></div>
+            </div>
+        </div>
+
+        <div class="dossie-mapa">
+            <div class="secao-mini">// MAPA APROXIMADO</div>
+            <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 24px; margin: 8px 0 16px;">COORDENADA OCULTA</h2>
+
+            <!-- mapa feito em SVG mesmo, pra nao precisar de imagem -->
+            <svg viewBox="0 0 300 300" class="dossie-mapa-svg" width="100%">
+                <!-- grade -->
+                <g stroke="#0D0D0D" stroke-width="1" opacity="0.2">
+                    <line x1="0" y1="60" x2="300" y2="60"/>
+                    <line x1="0" y1="120" x2="300" y2="120"/>
+                    <line x1="0" y1="180" x2="300" y2="180"/>
+                    <line x1="0" y1="240" x2="300" y2="240"/>
+                    <line x1="60" y1="0" x2="60" y2="300"/>
+                    <line x1="120" y1="0" x2="120" y2="300"/>
+                    <line x1="180" y1="0" x2="180" y2="300"/>
+                    <line x1="240" y1="0" x2="240" y2="300"/>
+                </g>
+                <!-- ruas -->
+                <path d="M 0 200 L 300 140" stroke="#0D0D0D" stroke-width="3" fill="none"/>
+                <path d="M 80 0 L 220 300" stroke="#0D0D0D" stroke-width="3" fill="none"/>
+                <path d="M 0 80 L 300 240" stroke="#0D0D0D" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+                <!-- alvo -->
+                <circle cx="180" cy="170" r="30" fill="none" stroke="#FF5F1F" stroke-width="3"/>
+                <circle cx="180" cy="170" r="6" fill="#FF5F1F"/>
+                <line x1="150" y1="170" x2="210" y2="170" stroke="#FF5F1F" stroke-width="2"/>
+                <line x1="180" y1="140" x2="180" y2="200" stroke="#FF5F1F" stroke-width="2"/>
+                <text x="190" y="135" font-family="JetBrains Mono" font-size="10" fill="#0D0D0D">504</text>
+            </svg>
+
+            <div style="margin-top: 16px;">
+                <div class="dossie-dado"><span class="cinza">// LATITUDE</span><span>-22.9068</span></div>
+                <div class="dossie-dado"><span class="cinza">// LONGITUDE</span><span>-43.1729</span></div>
+                <div class="dossie-dado"><span class="cinza">// ROTAÇÃO</span><span>72H</span></div>
+            </div>
+
+            <a href="protocolo.html" class="botao botao-laranja" style="margin-top: 24px; width: 100%; text-align: center;">&gt; SOLICITAR ACESSO</a>
+        </div>
+
+    </div>
+
+    <!-- rodape -->
+    <footer class="rodape">
+        <div class="rodape-coluna">
+            <div class="rodape-logo">CIFRA<span class="laranja">.</span></div>
+            <div class="cinza" style="margin-top: 8px;">arquivo de roles ocultos</div>
+        </div>
+        <div class="rodape-coluna">
+            <div class="cinza">[ PROTOCOLO ]</div>
+            <div>não fotografe.</div>
+            <div>não cite nomes.</div>
+            <div>se questionado, negue.</div>
+        </div>
+        <div class="rodape-coluna">
+            <div class="cinza">[ TRANSMISSÃO ]</div>
+            <div>nó://cifra.local</div>
+            <div class="laranja">● canal aberto</div>
+            <div class="cinza" style="margin-top: 12px;">© ARQUIVO_2026 // sem direitos reservados</div>
+        </div>
+    </footer>
+
+</body>
+</html>
