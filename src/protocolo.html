@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CIFRA. - Protocolo do Silêncio</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../assets/logo/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
     <nav class="menu-topo">
         <div class="menu-topo-dentro">
             <a href="index.html" class="menu-logo">
-                <img src="assets/logo-cifra-mark.png" alt="logo cifra">
                 CIFRA<span class="laranja">.</span>
             </a>
             <div class="menu-links">
                 <a href="index.html">[ 01_DIRETORIO ]</a>
-                <a href="dossie.html">[ 02_ARQUIVO ]</a>
+                <a href="index.html#ARQUIVOS_DESTACADOS">[ 02_ARQUIVO ]</a>
                 <a href="protocolo.html" class="ativo">[ 03_PROTOCOLO ]</a>
             </div>
         </div>
@@ -38,7 +39,7 @@
         <h1 class="protocolo-titulao">REGRAS DO<br>SILÊNCIO<span class="laranja">.</span></h1>
         <p class="protocolo-sub">leia. assine. esqueça.</p>
     </header>
-    
+
     <section class="secao">
         <ol class="regras-lista">
             <li>
@@ -78,7 +79,6 @@
             </li>
         </ol>
 
-        <!-- formulario terminal -->
         <form class="formulario-caixa" onsubmit="event.preventDefault();">
             <div class="formulario-topo">
                 <span>~/cifra/protocolo $ assinar.sh</span>
@@ -114,7 +114,8 @@
 
                 <div class="campo">
                     <label for="declaracao">DECLARAÇÃO DE SILÊNCIO</label>
-                    <textarea id="declaracao" placeholder="descreva, em até 3 linhas, por que merece acesso. nada de currículo."></textarea>
+                    <textarea id="declaracao"
+                        placeholder="descreva, em até 3 linhas, por que merece acesso. nada de currículo."></textarea>
                 </div>
 
                 <div class="campo" style="display: flex; gap: 8px; align-items: center;">
@@ -133,8 +134,6 @@
         </form>
 
     </section>
-
-    <!-- rodape -->
     <footer class="rodape">
         <div class="rodape-coluna">
             <div class="rodape-logo">CIFRA<span class="laranja">.</span></div>
@@ -153,6 +152,6 @@
             <div class="cinza" style="margin-top: 12px;">© ARQUIVO_2026 // sem direitos reservados</div>
         </div>
     </footer>
-
 </body>
+
 </html>

@@ -31,16 +31,21 @@ Jovens e pessoas interessadas em:
 ```
 cifra/
 │
-├── index.html
-├── lugar.html
-├── sobre.html
+├── src/
+│   └── index.html
+│   └── lugar.html
+│   └── sobre.html
 │
 ├── css/
-│   ├── reset.css
 │   └── style.css
 │
 ├── assets/
-│   └── img/
+│   └── images/
+│   │   └── galpao/
+│   │   └── submundo/
+│   └── logo/
+│
+├── fonts/
 │
 └── README.md
 ```
