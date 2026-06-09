@@ -33,8 +33,10 @@ cifra/
 │
 ├── src/
 │   └── index.html
-│   └── lugar.html
-│   └── sobre.html
+│   └── lugar-detalhado-galpao504.html
+│   └── lugar-detalhado-submundo.html
+│   └── lugar-detalhado-viaduto.html
+│   └── protocolo.html
 │
 ├── css/
 │   └── style.css
@@ -43,6 +45,7 @@ cifra/
 │   └── images/
 │   │   └── galpao/
 │   │   └── submundo/
+│   │   └── viaduto/
 │   └── logo/
 │
 ├── fonts/
@@ -70,8 +73,8 @@ cifra/
 ## Páginas
 
 - Home → Lista de lugares
-- Lugar → Detalhes do local
-- Sobre (Protocolo) → Regras + formulário
+- Lugar Detalhado → Detalhes do local
+- Protocolo → Regras + formulário
 
 ---
 
