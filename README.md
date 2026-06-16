@@ -1,6 +1,6 @@
 # CIFRA
 
-CIFRA é um projeto web desenvolvido com HTML e CSS puro que funciona como um guia de lugares "escondidos" e alternativos na cidade.
+CIFRA é um projeto web desenvolvido com HTML e CSS como trabalho final da matéria ARQIPW - Introdução a Programação Web, a ideia do projeto é funcionar como um guia de lugares "escondidos" e alternativos.
 
 A proposta é simular um sistema antigo / arquivo secreto, utilizando o estilo **Brutalismo Digital**.
 
@@ -88,7 +88,3 @@ index.html
 no navegador.
 
 ---
-
-## Autor
-
-Felipe Ziviani Lima
