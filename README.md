@@ -32,7 +32,6 @@ Jovens e pessoas interessadas em:
 cifra/
 │
 ├── src/
-│   └── index.html
 │   └── lugar-detalhado-galpao504.html
 │   └── lugar-detalhado-submundo.html
 │   └── lugar-detalhado-viaduto.html
@@ -49,7 +48,7 @@ cifra/
 │   └── logo/
 │
 ├── fonts/
-│
+└── index.html
 └── README.md
 ```
 
