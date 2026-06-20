@@ -155,7 +155,7 @@ img {
 
 .hero-titulao {
     font-family: 'Archivo Black', sans-serif;
-    font-size: clamp(72px, 18vw, 200px);
+    font-size: 140px;
     line-height: 0.85;
     letter-spacing: -0.04em;
     word-break: break-word;
@@ -282,22 +282,23 @@ img {
 
 .secao-titulao {
     font-family: 'Archivo Black', sans-serif;
-    font-size: clamp(28px, 5vw, 48px);
+    font-size: 40px;
     letter-spacing: -0.04em;
     word-break: break-word;
 }
 
 .grade-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     border: 3px solid #0D0D0D;
 }
 
 .card {
+    width: 33.333%;
     border-right: 3px solid #0D0D0D;
 }
 
-.card:last-child {
+.card.sem-borda-direita {
     border-right: none;
 }
 
@@ -404,7 +405,7 @@ img {
     border-right: 2px solid #FAF8F2;
 }
 
-.tabela th:last-child {
+.tabela th.sem-borda-direita {
     border-right: none;
 }
 
@@ -414,13 +415,21 @@ img {
     border-right: 2px solid #0D0D0D;
 }
 
-.tabela td:last-child {
+.tabela td.sem-borda-direita {
     border-right: none;
 }
 
 .tabela tbody tr:hover {
     background-color: #0D0D0D;
     color: #FAF8F2;
+}
+
+.rotulo-mobile {
+    display: none;
+    color: #FF5F1F;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-right: 4px;
 }
 
 .tag-mini {
@@ -448,18 +457,19 @@ img {
     border-top: 3px solid #0D0D0D;
     background-color: #0D0D0D;
     color: #FAF8F2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     font-size: 12px;
     text-transform: uppercase;
 }
 
 .rodape-coluna {
+    width: 33.333%;
     padding: 24px;
     border-right: 2px solid #FAF8F2;
 }
 
-.rodape-coluna:last-child {
+.rodape-coluna.sem-borda-direita {
     border-right: none;
 }
 
@@ -487,7 +497,7 @@ img {
 
 .lugar-titulao {
     font-family: 'Archivo Black', sans-serif;
-    font-size: clamp(48px, 10vw, 96px);
+    font-size: 72px;
     letter-spacing: -0.04em;
     line-height: 0.9;
     word-break: break-word;
@@ -501,17 +511,18 @@ img {
 }
 
 .lugar-galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     border-bottom: 3px solid #0D0D0D;
 }
 
 .lugar-foto {
+    width: 33.333%;
     border-right: 3px solid #0D0D0D;
     overflow: hidden;
 }
 
-.lugar-foto:last-child {
+.lugar-foto.sem-borda-direita {
     border-right: none;
 }
 
@@ -528,12 +539,13 @@ img {
 }
 
 .lugar-corpo {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     border-bottom: 3px solid #0D0D0D;
 }
 
 .lugar-relatorio {
+    width: 66%;
     padding: 40px;
     border-right: 3px solid #0D0D0D;
 }
@@ -551,6 +563,7 @@ img {
 }
 
 .lugar-mapa {
+    width: 34%;
     padding: 40px;
 }
 
@@ -576,7 +589,7 @@ img {
 
 .protocolo-titulao {
     font-family: 'Archivo Black', sans-serif;
-    font-size: clamp(56px, 13vw, 120px);
+    font-size: 88px;
     letter-spacing: -0.04em;
     line-height: 0.95;
     word-break: break-word;
@@ -602,7 +615,7 @@ img {
     align-items: center;
 }
 
-.regras-lista li:last-child {
+.regras-lista li.sem-borda-inferior {
     border-bottom: none;
 }
 
@@ -659,11 +672,6 @@ img {
     margin-bottom: 6px;
 }
 
-.campo label::before {
-    content: "> ";
-    color: #FF5F1F;
-}
-
 .campo input,
 .campo textarea,
 .campo select {
@@ -705,29 +713,33 @@ img {
     .hero-direita {
         flex: 1 1 100%;
         padding: 32px 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
         gap: 12px;
+    }
+
+    .hero-direita .caixa-info {
+        width: calc(50% - 6px);
     }
 
     .caixa-info {
         margin-bottom: 0;
     }
 
-    .grade-cards {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .card {
+        width: 50%;
         border-right: none;
         border-bottom: 3px solid #0D0D0D;
     }
 
-    .card:nth-child(odd) {
+    /* Antes: :nth-child(odd) dava borda direita aos cards ímpares.
+       Agora: adicione manualmente class="borda-direita-tablet"
+       nos cards de posição ímpar (1º, 3º, 5º...) */
+    .card.borda-direita-tablet {
         border-right: 3px solid #0D0D0D;
     }
 
-    .card:last-child {
+    .card.sem-borda-inferior {
         border-bottom: none;
     }
 
@@ -735,36 +747,56 @@ img {
         padding: 32px 20px;
     }
 
-    .lugar-galeria {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .lugar-foto:nth-child(2) {
+    /* Galeria no tablet: 2 colunas */
+    .lugar-foto {
+        width: 50%;
         border-right: none;
     }
 
-    .lugar-foto:last-child {
-        grid-column: 1 / -1;
+    /* Antes: lugar-foto:nth-child(2) tirava a borda direita da 2ª foto.
+       Agora: adicione class="sem-borda-direita" nela manualmente */
+    .lugar-foto.sem-borda-direita {
+        border-right: none;
+    }
+
+    /* Antes: lugar-foto:last-child ocupava a linha inteira (grid-column: 1/-1).
+       Agora: adicione class="foto-linha-toda" na última foto */
+    .lugar-foto.foto-linha-toda {
+        width: 100%;
         border-right: none;
         border-top: 3px solid #0D0D0D;
     }
 
-    .lugar-corpo {
-        grid-template-columns: 1fr;
-    }
-
     .lugar-relatorio {
+        width: 100%;
         border-right: none;
         border-bottom: 3px solid #0D0D0D;
         padding: 32px 20px;
     }
 
     .lugar-mapa {
+        width: 100%;
         padding: 32px 20px;
     }
 
     .protocolo-cabecalho {
         padding: 40px 20px;
+    }
+
+    .hero-titulao {
+        font-size: 90px;
+    }
+
+    .lugar-titulao {
+        font-size: 56px;
+    }
+
+    .protocolo-titulao {
+        font-size: 64px;
+    }
+
+    .secao-titulao {
+        font-size: 34px;
     }
 }
 
@@ -802,7 +834,10 @@ img {
 
     .hero-direita {
         padding: 24px 16px;
-        grid-template-columns: 1fr;
+    }
+
+    .hero-direita .caixa-info {
+        width: 100%;
     }
 
     .botoes-hero .botao {
@@ -827,17 +862,13 @@ img {
         align-items: flex-start;
     }
 
-    .grade-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .card,
-    .card:nth-child(odd) {
+    .card {
+        width: 100%;
         border-right: none;
         border-bottom: 3px solid #0D0D0D;
     }
 
-    .card:last-child {
+    .card.sem-borda-inferior {
         border-bottom: none;
     }
 
@@ -875,7 +906,7 @@ img {
         padding: 8px 0;
     }
 
-    .tabela tr:first-child {
+    .tabela tr.primeira-linha {
         border-top: none;
     }
 
@@ -885,32 +916,22 @@ img {
         font-size: 12px;
     }
 
-    .tabela td::before {
-        content: attr(data-rotulo) " // ";
-        color: #FF5F1F;
-        text-transform: uppercase;
-        font-size: 10px;
-        margin-right: 4px;
+    .rotulo-mobile {
+        display: inline;
     }
 
     .lugar-cabecalho {
         padding: 24px 16px;
     }
 
-    .lugar-galeria {
-        grid-template-columns: 1fr;
-    }
-
-    .lugar-foto,
-    .lugar-foto:nth-child(2),
-    .lugar-foto:last-child {
+    .lugar-foto {
+        width: 100%;
         border-right: none;
         border-top: none;
         border-bottom: 3px solid #0D0D0D;
-        grid-column: auto;
     }
 
-    .lugar-foto:last-child {
+    .lugar-foto.sem-borda-inferior {
         border-bottom: none;
     }
 
@@ -921,6 +942,7 @@ img {
     .lugar-relatorio,
     .lugar-mapa {
         padding: 24px 16px;
+        width: 100%;
     }
 
     .lugar-relatorio h2 {
@@ -958,23 +980,14 @@ img {
         gap: 4px;
     }
 
-    .rodape {
-        grid-template-columns: 1fr;
-    }
-
     .rodape-coluna {
+        width: 100%;
         border-right: none;
         border-bottom: 2px solid #FAF8F2;
     }
 
-    .rodape-coluna:last-child {
+    .rodape-coluna.sem-borda-inferior {
         border-bottom: none;
-    }
-
-    h1,
-    h2,
-    h3 {
-        word-break: break-word;
     }
 
     html,
@@ -982,17 +995,30 @@ img {
         overflow-x: hidden;
     }
 
-    .lugar-corpo {
-        grid-template-columns: 1fr;
-    }
-
-    .lugar-relatorio {
-        border-right: none;
-        border-bottom: 3px solid #0D0D0D;
-    }
-
     .lugar-mapa iframe {
         width: 100%;
         height: 280px;
+    }
+
+    .hero-titulao {
+        font-size: 56px;
+    }
+
+    .lugar-titulao {
+        font-size: 40px;
+    }
+
+    .protocolo-titulao {
+        font-size: 44px;
+    }
+
+    .secao-titulao {
+        font-size: 26px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        word-break: break-word;
     }
 }
