@@ -47,7 +47,6 @@ cifra/
 │   │   └── viaduto/
 │   └── logo/
 │
-├── fonts/
 └── index.html
 └── README.md
 ```
