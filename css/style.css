@@ -783,6 +783,11 @@ img {
         gap: 8px;
     }
 
+    .video-caixa video {
+        max-height: 280px;
+        object-fit: cover;
+    }
+    
     .menu-links {
         width: 100%;
         justify-content: flex-start;
