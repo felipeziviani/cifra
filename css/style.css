@@ -732,9 +732,6 @@ img {
         border-bottom: 3px solid #0D0D0D;
     }
 
-    /* Antes: :nth-child(odd) dava borda direita aos cards ímpares.
-       Agora: adicione manualmente class="borda-direita-tablet"
-       nos cards de posição ímpar (1º, 3º, 5º...) */
     .card.borda-direita-tablet {
         border-right: 3px solid #0D0D0D;
     }
@@ -747,20 +744,15 @@ img {
         padding: 32px 20px;
     }
 
-    /* Galeria no tablet: 2 colunas */
     .lugar-foto {
         width: 50%;
         border-right: none;
     }
 
-    /* Antes: lugar-foto:nth-child(2) tirava a borda direita da 2ª foto.
-       Agora: adicione class="sem-borda-direita" nela manualmente */
     .lugar-foto.sem-borda-direita {
         border-right: none;
     }
 
-    /* Antes: lugar-foto:last-child ocupava a linha inteira (grid-column: 1/-1).
-       Agora: adicione class="foto-linha-toda" na última foto */
     .lugar-foto.foto-linha-toda {
         width: 100%;
         border-right: none;
